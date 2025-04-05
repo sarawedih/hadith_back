@@ -119,6 +119,7 @@ if (!process.env.NODE_ENV) {
   process.env.NODE_ENV = 'development';
 }
 
+app.set('trust proxy', 1); // ✅ مطلوب من Render حتى يتم التعامل مع X-Forwarded-For
 
 // Global Error Handler
 app.use(errorHandler);
